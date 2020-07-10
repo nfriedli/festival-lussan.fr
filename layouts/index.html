@@ -3,22 +3,21 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
-{{ $dates := slice ""}}
+{{ $dates := slice }}
 {{ range .Site.Pages}}
     {{ range .Params.representations }}
-    {{ $dates = $dates | append .date}}
+        {{ $dates = $dates | append .date }}
     {{ end }}
 {{end}}
 
 {{ $dates = $dates | uniq | sort }}
 
-{{ range $dates }}
-{{ $dateDuJour := . }}
+{{ range $dateDuJour := $dates }}
+
 <h2>{{ $dateDuJour }}</h2>
 
-{{ range $.Site.Pages }}
+{{ range $pageDeTest := $.Site.Pages }}
 <ul>
-    {{ $pageDeTest := .}}
     {{ range .Params.representations }}
     {{ if eq $dateDuJour .date }}
         <li><a href="{{ $pageDeTest.Permalink }}">{{ $pageDeTest.Title }}</a></li>
