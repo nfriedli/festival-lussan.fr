@@ -3,4 +3,30 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
+{{ $dates := slice ""}}
+{{ range .Site.Pages}}
+    {{ range .Params.representations }}
+    {{ $dates = $dates | append .date}}
+    {{ end }}
+{{end}}
+
+{{ $dates = $dates | uniq | sort }}
+
+{{ range $dates }}
+{{ $dateDuJour := . }}
+<h2>{{ $dateDuJour }}</h2>
+
+{{ range $.Site.Pages }}
+<ul>
+    {{ $pageDeTest := .}}
+    {{ range .Params.representations }}
+    {{ if eq $dateDuJour .date }}
+        <li><a href="{{ $pageDeTest.Permalink }}">{{ $pageDeTest.Title }}</a></li>
+    {{ end }}
+    {{ end }}
+</ul>
+{{ end }}
+
+{{ end }}
+
 {{ end }}
