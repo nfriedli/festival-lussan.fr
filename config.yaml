@@ -1,3 +1,18 @@
 baseURL: https://festival-lussant.fr/
 languageCode: fr
 title: Festival de Lussan
+
+params:
+  footer: |
+        [Agenda 2020](/2020/)
+
+        Entrée: 10€  
+        Gratuit jusqu’à 12 ans  
+        Abonnement tous les spectacles: 50€
+        
+        Réservations: Office du tourisme de Lussan  
+        [+33 04 66 74 55 27](tel:+330466745527)  
+        [festival.lussan@gmail.com](mailto:festival.lussan@gmail.com)
+
+         Tous les spectacles ont lieu dans le village de Lussan.  
+         Le lieu précis de chaque concert est indiqué devant la Mairie.

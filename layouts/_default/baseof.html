@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }}</title>
-    <style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">        <style>
         html {
-            background: #eee;
-            color: #222;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 100%;
+            background: #fff;
+            color: #333;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 110%;
             line-height: 1.5;
         }
         body {
-            margin:auto;
+            margin: 2rem auto;
             max-width: 35rem;
         }
 
@@ -21,16 +21,88 @@
             color: #666;
             text-transform: uppercase;
         }
+
+        main {
+            padding: 4rem 0;
+            font-size: 1.25rem;
+        }
+
+        a {
+            color: orangered;
+            text-decoration: none;
+        }
+
+        div.flex {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+
+        }
+
+        .flex img {
+            display: block;
+            max-width: 3rem;
+            object-fit: contain;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+        }
+
+        td, th  {
+            border: 1px solid #999;
+        }
+
+        td, th {
+            padding: .2em .4em;
+        }
+
+        h1, h2 {
+            font-family: Playfair Display;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.1;
+        }
+
+        div.concert {
+            margin-bottom: 2rem;
+        }
+
+        .concert h2 {
+            margin: 0;
+            padding: 0;
+            line-height: 1.1;
+
+        }
+        
+        .description {
+            align-self: center;
+        }
     </style>
 </head>
 <body>
-    <header>Header de page: Festival de Lussan</header>
+    <header>
+        <a href="/">Festival de Lussan</a>
+    </header>
 
     <main>
     {{ block "main" . }}
     {{ end}}
     </main>
     
-    <footer>Pied de page: Garrigue et compagnie</footer>
+    <footer>
+        {{ .Site.Params.footer | markdownify }}
+        <div class="flex">
+        <img src="/images/lussan.png">
+        <img src="/images/tourisme.png">
+        <img src="/images/uzes.png">
+        <img src="/images/beaux-villages.png">
+        <img src="/images/villages-caractere.png">
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,5 +1,3 @@
 ---
-title: Festival de Lussan 2020
+title: Festival de Lussan
 ---
-
-Ici, idéalement un agenda, donc par date

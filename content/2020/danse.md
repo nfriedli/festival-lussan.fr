@@ -1,11 +1,11 @@
 ---
 title: La Danse dans tous ses états
+subtitle: violon et harpe
 weight: 20
-representations:
-    - date: 2020-08-01
-      heure: 21h00
-    - date: 2020-07-30
-      heure: 21h00
 ---
 
-La Danse dans tous ses états, concert...
+La Danse dans tous ses états, concert par Hector Burgan, violon et Isabelle Müller, harpe. Oeuvres
+de Bach, Bartok, Saint-Saëns, Piazzolla...
+
+- jeudi 30 juillet à 21h00
+- samedi 1er août à 21h00

@@ -3,14 +3,4 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
-{{ range .Pages  }}
-<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-
-<ul>
-{{ range sort .Params.Representations "date" }}
-<li>{{ .date }} {{ .heure }}</li>
-{{end}}
-</ul>
-{{ end }}
-
 {{ end }}
